@@ -30,21 +30,26 @@ L<Graphics::ColorNames>, L<http://home1.netscape.com/home/bg/colorindex.html>
 
 =head1 AUTHOR
 
-Robert Rothenberg <rrwo@cpan.org>
+Robert Rothenberg <rrwo at cpan.org>
 
 =head2 Acknowledgements
 
-<magnus@mbox604.swipnet.se> who pointed out Inconsistencies
+<magnus at mbox604.swipnet.se> who pointed out Inconsistencies
+
+=head1 LICENSE
+
+Copyright (c) 2001-2004 Robert Rothenberg. All rights reserved.
+This program is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.
 
 =cut
 
-require 5.005;
+require 5.006;
+
 use strict;
-# use warnings;
+use warnings;
 
-use vars qw( $VERSION );
-
-$VERSION = '1.03';
+our $VERSION = '1.05';
 
 # See http://home1.netscape.com/home/bg/colorindex.html
 

@@ -1,0 +1,48 @@
+Revision history for Perl extension Graphics::ColorNames.
+
+0.32   5 Dec 2002
+	- fixed inconsistencies with grey/gray spellings in X.pm
+	- added note in POD about using rt.cpan.org for bug reports
+	- minor changes in POD for Netscape.pm
+        - added TODO file
+
+0.31  23 Oct 2002
+	- fixed mispelling of "fuchsia" in HTML.pm
+
+0.30   4 Oct 2001
+	- fixed bug with non-existent color names
+	- corrected some typos in and updated the documentation
+	- added multiple color naming schemes
+	- when passed a value in the form of '#000000', returns that value
+
+0.24  28 Apr 2001
+	- fixed  colors in X.pm (such as some 'green') defined as 0x000000
+	- removed duplicate grays (ie, 'gray0') from X.pm
+	- renamed test suite files to enforce testing order
+	- v0.23 mistakenly dated 17 Mar instead of 17 April
+
+0.23  17 Apr 2001
+	- X-Windows color names now from rgb.txt (includes names with
+	  spaces, such as 'alice blue' as well as 'aliceblue')
+	- Added Netscape color naming scheme
+
+0.22  15 Mar 2001
+	- added example on how to add your own naming schema
+	- schema files (X.pm, HTML.pm, Windows.pm) were stored in the
+	  wrong subdirectories
+	- removed test.pl and double-testing
+
+0.21  12 Mar 2001
+	- fixed an issue with Test::Harness expecting t/*.t tests
+
+0.20  11 Mar 2001
+	- no longer a Tie::Hash
+	- additional example in POD
+	- added Test::Harness and a better test suite
+	- commented-out 'use warnings' in modules
+	- addition of tuple2hex function
+	- changed the way files are included in the distribution
+
+0.10  19 Feb 2001
+	- original (experimental) version released
+

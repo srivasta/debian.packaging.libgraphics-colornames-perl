@@ -1,0 +1,56 @@
+NAME
+    Graphics::ColorNames - defines RGB values for common color names
+
+REQUIREMENTS
+    `Graphics::ColorNames' should work on Perl 5.005.
+
+    It uses only standard modules.
+
+  Installation
+
+    Installation is pretty standard:
+
+      perl Makefile.PL
+      make
+      make test
+      make install
+
+HISTORY
+    Revision history since v0.31:
+
+    0.32   5 Dec 2002
+	- fixed inconsistencies with grey/gray spellings in X.pm
+	- added note in POD about using rt.cpan.org for bug reports
+	- minor changes in POD for Netscape.pm
+        - added TODO file
+
+SYNOPSIS
+      use Graphics::ColorNames qw( hex2tuple tuple2hex );
+
+      tie %NameTable, 'Graphics::ColorNames', 'X';
+
+      my $rgbhex1 = $NameTable{'green'};    # returns '00ff00'
+      my $rgbhex2 = tuple2hex( 0, 255, 0 ); # returns '00ff00'
+      my @rgbtup  = hex2tuple( $rgbhex );   # returns (0, 255, 0)
+
+      my $rgbhex3 = $NameTable{'#123abc'};  # returns '123abc'
+      my $rgbhex4 = $NameTable{'123abc'};   # returns '123abc'
+
+DESCRIPTION
+    This module defines RGB values for common color names. The intention is
+    to (1) provide a common module that authors can use with other modules
+    to specify colors; and (2) free module authors from having to "re-invent
+    the wheel" whenever they decide to give the users the option of
+    specifying a color by name rather than RGB value.
+
+    A more detailed description with documentation can be found in the
+    module's POD.
+
+AUTHOR
+    Robert Rothenberg <rrwo@cpan.org>
+
+LICENSE
+    Copyright (c) 2001-2002 Robert Rothenberg. All rights
+    reserved. This program is free software; you can redistribute it
+    and/or modify it under the same terms as Perl itself.
+

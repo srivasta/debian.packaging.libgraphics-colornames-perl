@@ -1,0 +1,11 @@
+To-Do List for Graphics::ColorNames
+
+  Netscape.pm
+	- research inconsistent colors in Netscape 1.1 definition to
+	  see if this can be corrected.
+ 	- deprecate use of Netscape.pm
+
+  X.pm
+	- base X.pm upon the most recent rgb.txt file from the X
+ 	  consortium
+

@@ -1,0 +1,16 @@
+Changes
+ColorNames.pm
+HTML.pm
+Makefile.PL
+MANIFEST
+Netscape.pm
+README
+t/01-ColorNames.t
+t/02-X.t
+t/03-HTML.t
+t/04-Windows.t
+t/05-Netscape.t
+TODO
+Windows.pm
+X.pm
+

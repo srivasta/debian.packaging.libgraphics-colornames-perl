@@ -5,10 +5,10 @@ BEGIN { plan tests => 44, todo => [ ] }
 use strict;
 use Carp;
 
-use Graphics::ColorNames 0.30, qw( hex2tuple tuple2hex );
+use Graphics::ColourNames 0.30, qw( hex2tuple tuple2hex );
 ok(1);
 
-tie my %colors, 'Graphics::ColorNames';
+tie my %colors, 'Graphics::ColourNames';
 ok(1);
 
 my $count = 0;
@@ -42,10 +42,10 @@ ok(defined($!));
 eval { %colors = (); };
 ok(defined($!));
 
-eval { $colors{MyCustomColor} = 'FFFFFF'; };
+eval { $colors{MyCustomColour} = 'FFFFFF'; };
 ok(defined($!));
 
-eval { delete($colors{MyCustomColor}); };
+eval { delete($colors{MyCustomColour}); };
 ok(defined($!));
 
 # Test RGB values being passed through
@@ -60,14 +60,14 @@ foreach my $rgb (qw(
 
 # Test using multiple schemes
 
-tie my %colors2, 'Graphics::ColorNames', qw( X Netscape );
+tie my %colors2, 'Graphics::ColourNames', qw( X Netscape );
 
 ok(!exists $colors{Silver});  # Silver doesn't exist in X
 ok(defined $colors2{Silver}); # It does in Netscape
 
 # Test precedence
 
-tie my %colors3, 'Graphics::ColorNames', qw( Netscape X );
+tie my %colors3, 'Graphics::ColourNames', qw( Netscape X );
 
 ok($colors{Brown},  'a52a2a'); # Brown in X
 ok($colors2{Brown}, 'a52a2a'); # Brown in X (don't try Netscape)
@@ -75,6 +75,6 @@ ok($colors3{Brown}, 'a62a2a'); # Brown in Netscape (don't try X)
 
 # Test handling of non-existent color names
 
-ok(!defined $colors{NonExistentColorName});
-ok(!exists  $colors{NonExistentColorName});
+ok(!defined $colors{NonExistentColourName});
+ok(!exists  $colors{NonExistentColourName});
 

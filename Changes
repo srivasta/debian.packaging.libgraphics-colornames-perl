@@ -1,5 +1,52 @@
 Revision history for Perl extension Graphics::ColorNames.
 
+1.05    Fri Sep  3 2004
+	- correction to Graphics::ColourNames
+	- correction to README
+
+1.04    Fri Sep  3 2004
+	- updates to POD
+	- a filehandle for a rgb.txt file can be specified
+
+1.03    Thu Aug 26 2004
+	- hooks to support CODE scheme types (as with module
+          Graphics::ColorNames::GrayScale 2.00)
+        - ColourNames.pm has same version of ColorNames.pm
+
+1.02    Tue Aug 24 2004
+	- added Graphics::ColourNames alias
+	- minor changes to ColorNames.pm
+
+1.01    Wed Aug 18 2004
+	- corrected typo in REQUIREMENTS (wrong Perl version)
+	- uses Module::Load for improved dynamic loading
+	- EXISTS works across multiple color schemes
+	- bug in FETCH that returned key has been fixed
+
+1.00    Sat Jul 31 2004
+	- changed version to 1.00 as release appears to be stable
+	- corrected bad link in POD
+
+0.39_04 Mon Jul 26 2004
+	- rebuilt distribution with proper META.yml
+
+0.39_03 22 Jul 2004
+	- added required rgb.txt for tests to MANIFEST and distro
+
+0.39_02 22 Jul 2004
+	* now requires Perl 5.6.0
+	- uses IO::File
+	- option to parse an rgb.txt file
+	- removed TODO from distribution
+	- Netscape.pm, HTML.pm and Windows.pm warnings enabled
+	- additions and corrections in POD
+
+0.39_01 21 Jul 2004
+	- added Build.PL to distribution
+	- added hex() and rgb() methods
+	- created object-oriented interface
+	- additions and corrections in POD
+
 0.32   5 Dec 2002
 	- fixed inconsistencies with grey/gray spellings in X.pm
 	- added note in POD about using rt.cpan.org for bug reports

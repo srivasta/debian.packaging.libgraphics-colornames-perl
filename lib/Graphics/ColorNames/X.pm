@@ -22,31 +22,32 @@ L<Graphics::ColorNames>, rgb.txt
 
 =head1 AUTHOR
 
-Robert Rothenberg <rrwo@cpan.org>
+Robert Rothenberg <rrwo at cpan.org>
 
 =head2 Acknowledgements
 
-Steve Pomeroy <steve_x@earthling.net> -- fixed the broken color definitions
+Steve Pomeroy <steve_x at earthling.net> -- fixed the broken color definitions
 
+=head1 LICENSE
 
+Copyright (c) 2001-2004 Robert Rothenberg. All rights reserved.
+This program is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.
 
 =cut
 
-require 5.005;
+require 5.006;
+
 use strict;
-# use warnings;
+use warnings;
 
-use vars qw( $VERSION );
-
-$VERSION = '1.05'; # skipped v1.04
+our $VERSION = '1.06';
 
 # Original name and colors (v1.01 and earlier) from Kevin J. Walsh,
 # http://eies.njit.edu/~walsh/rgb.html
 
 # Afterwards, XConsortium: rgb.txt,v 10.41 94/02/20 18:39:36 rws Exp
-
-
-
+# Verified with Xorg: rgb.txt,v 1.3 2000/08/17 19:54:00 cpqbld Exp
 
 sub NamesRgbTable() {
   use integer;

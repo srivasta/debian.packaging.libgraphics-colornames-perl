@@ -22,17 +22,23 @@ C<Graphics::ColorNames>
 
 =head1 AUTHOR
 
-Robert Rothenberg <rrwo@cpan.org>
+Robert Rothenberg <rrwo at cpan.org>
+
+=head1 LICENSE
+
+Copyright (c) 2001-2004 Robert Rothenberg. All rights reserved.
+This program is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.
+
 
 =cut
 
-require 5.005;
+require 5.006;
+
 use strict;
-# use warnings;
+use warnings;
 
-use vars qw( $VERSION );
-
-$VERSION = '1.02';
+our $VERSION = '1.03';
 
 sub NamesRgbTable() {
   use integer;

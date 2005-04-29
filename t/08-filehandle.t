@@ -1,21 +1,19 @@
-use Test;
-
-BEGIN { plan tests => 10, todo => [ ] }
+#!/usr/bin/perl
 
 use strict;
-use Carp;
+use Test::More tests => 10;
+
 use IO::File;
 
 my $fh = new IO::File;
 open($fh, './t/rgb.txt');
 
-use Graphics::ColorNames 0.39, qw( hex2tuple tuple2hex );
-ok(1);
+use_ok('Graphics::ColorNames', 1.06, qw( hex2tuple tuple2hex ));
 
 tie my %colors, 'Graphics::ColorNames', $fh;
-ok(1);
+ok(tied %colors);
 
-ok(keys %colors, 6); #
+ok(keys %colors == 6); #
 
 my $count = 0;
 foreach my $name (keys %colors)
@@ -23,7 +21,7 @@ foreach my $name (keys %colors)
     my @RGB = hex2tuple( $colors{$name} );
     $count++, if (tuple2hex(@RGB) eq $colors{$name} );
   }
-ok($count, keys %colors);
+ok($count == keys %colors);
 
 foreach my $name (qw( one two three four five six)) {
   ok(exists $colors{$name});

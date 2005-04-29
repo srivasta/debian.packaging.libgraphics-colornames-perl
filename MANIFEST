@@ -4,6 +4,9 @@ Makefile.PL
 MANIFEST
 META.yml
 README
+t/00-Prereqs.t
+t/00-pod-coverage.t
+t/00-pod.t
 t/01-ColorNames.t
 t/01-ColourNames.t
 t/02-X.t
@@ -21,3 +24,4 @@ lib/Graphics/ColorNames/Windows.pm
 lib/Graphics/ColorNames/X.pm
 lib/Graphics/ColourNames.pm
 
+SIGNATURE    Added here by Module::Build

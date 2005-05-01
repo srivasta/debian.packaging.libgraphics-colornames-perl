@@ -12,13 +12,16 @@ my $build = Module::Build->new
        'Module::Load'               => 0.10,
      },
      recommends => {
+       'Pod::Coverage'              => 0,
+       'Test::Pod'                  => 1.00,
+       'Test::Prereq'               => 0,
      },
      build_requires => {
        'Test::More'                 => 0,
-       'Test'                       => 0,
      },
      create_makefile_pl => 'traditional',
      dist_author        => 'Robert Rothenberg <rrwo at cpan.org>',
+     sign               => 1,
 );
 
 $build->create_build_script;

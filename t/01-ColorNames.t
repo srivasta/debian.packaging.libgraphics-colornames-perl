@@ -1,15 +1,13 @@
-use Test;
-
-BEGIN { plan tests => 44, todo => [ ] }
+#!/usr/bin/perl
 
 use strict;
-use Carp;
 
-use Graphics::ColorNames 0.30, qw( hex2tuple tuple2hex );
-ok(1);
+use Test::More tests => 44;
+
+use_ok('Graphics::ColorNames', 1.06, qw( hex2tuple tuple2hex ));
 
 tie my %colors, 'Graphics::ColorNames';
-ok(1);
+ok(tied %colors);
 
 my $count = 0;
 foreach my $name (keys %colors)
@@ -17,14 +15,14 @@ foreach my $name (keys %colors)
     my @RGB = hex2tuple( $colors{$name} );
     $count++, if (tuple2hex(@RGB) eq $colors{$name} );
   }
-ok($count, keys %colors);
+ok($count == keys %colors);
 
 $count = 0;
 foreach my $name (keys %colors)
   {
     $count++, if ($colors{lc($name)} eq $colors{uc($name)});
   }
-ok($count, keys %colors);
+ok($count == keys %colors);
 
 
 $count = 0;
@@ -32,7 +30,7 @@ foreach my $name (keys %colors)
   {
     $count++, if (exists($colors{$name}))
   }
-ok($count, keys %colors);
+ok($count == keys %colors);
 
 # Test CLEAR, DELETE and STORE as returning errors
 

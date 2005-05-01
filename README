@@ -49,15 +49,16 @@ DESCRIPTION
     module's POD.
 
 HISTORY
-    Revision history since v1.03:
+    Revision history since the last release:
 
-    1.05    Fri Sep  3 2004
-	- correction to Graphics::ColourNames
-	- correction to README
-
-    1.04    Fri Sep  3 2004
-	- updates to POD
-	- a filehandle for a rgb.txt file can be specified
+    1.06 Tue Mar 29 2005
+	- cleaned up tests
+	- added DSLIP information to POD
+	- added Test::Pod tests
+        - added Pod::Coverage tests
+	- minor documentation changes
+	- uses Test::Prereq to test distro prereqs
+	- added SIGNATURE to distribution
 
     A more detailed revision history is available in the Changes file.
 
@@ -65,7 +66,7 @@ AUTHOR
     Robert Rothenberg <rrwo at cpan.org>
 
 LICENSE
-    Copyright (c) 2001-2004 Robert Rothenberg. All rights
+    Copyright (c) 2001-2005 Robert Rothenberg. All rights
     reserved. This program is free software; you can redistribute it
     and/or modify it under the same terms as Perl itself.
 

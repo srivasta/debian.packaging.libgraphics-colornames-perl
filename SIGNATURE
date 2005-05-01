@@ -1,0 +1,48 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.44.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 09d8e07ed2906851bc648c38764d954ae65ae9c0 Build.PL
+SHA1 f914d5d44538dff1eacc5b4be581387bd786e4df Changes
+SHA1 b5523653c65c2b15b0c10c7c3821b76c26db901e MANIFEST
+SHA1 22f4ac1e4f24793e3a54f575a623bf6dd4eb7a98 META.yml
+SHA1 0626b548af56d29d44faa6d7509e3ead5b7aa343 Makefile.PL
+SHA1 85eaead1e33535c579304ef2116aa9722c9b39f0 README
+SHA1 94fe6e319f6158139af6a7b4ba4a4cea3d697d14 lib/Graphics/ColorNames.pm
+SHA1 4db6a372a70f1a4b90a46e153330b7a570757023 lib/Graphics/ColorNames/HTML.pm
+SHA1 ea38a6c660621a7c57cb9f31bb44737cdfe3d7b2 lib/Graphics/ColorNames/Netscape.pm
+SHA1 161469f8bcfb14ef693bfd315c0e41b3721bd16b lib/Graphics/ColorNames/Windows.pm
+SHA1 dfdd478039e0f5d8f6351d8a1d90c53e16343de1 lib/Graphics/ColorNames/X.pm
+SHA1 d28b85622781d77fe5f23c4c2f3dfea82939ade5 lib/Graphics/ColourNames.pm
+SHA1 c7d63443ba312c659cf441d89231a065d9e6d716 t/00-Prereqs.t
+SHA1 bef0f210e3cd888a0fbc10c40ee90419b8d079e3 t/00-pod-coverage.t
+SHA1 a7be5b4aad4ce3f7a59d6e3cd654ee6c6e642344 t/00-pod.t
+SHA1 414dfe0a0c0cc08f5b1171e0a8d5d29872fedd91 t/01-ColorNames.t
+SHA1 80cd23ecd10a62e678d998fa0f884188c405edf1 t/01-ColourNames.t
+SHA1 e02321c84d2fc9cb23d5ef546e79659209cddbb0 t/02-X.t
+SHA1 375ff88426e0c83fc93c79b5b328c613d9824add t/03-HTML.t
+SHA1 0a7f6ff67e286cd5a7e6ad84986675fb8e346149 t/04-Windows.t
+SHA1 461c697b85a232a3237737abe4fd85a4ea70a586 t/05-Netscape.t
+SHA1 d510ca893737063097fd25242d8b3a940755c7bd t/06-obj.t
+SHA1 8d01b6fd40a4f3b5a084fef41d0212b70de36983 t/07-file.t
+SHA1 c1d92dcde46607a45b3b8aceed1aa4201340409b t/08-filehandle.t
+SHA1 d3e7e6d18177d7885cbd06d3f37b7a89f539c68d t/rgb.txt
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (MingW32)
+
+iD8DBQFCSd8RV485gMKcmRARArJgAJsGdC2oFLJSIOEEyov9S/DppEgApwCgjJlk
+BfnMi//CPmr0GmN+xJ1UUxo=
+=x/+X
+-----END PGP SIGNATURE-----

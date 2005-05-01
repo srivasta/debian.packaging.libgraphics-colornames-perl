@@ -9,7 +9,7 @@ require Graphics::ColorNames;
 
 use base 'Graphics::ColorNames';
 
-our $VERSION = '1.05';
+our $VERSION = '1.06';
 
 our @EXPORT    = qw( );
 our @EXPORT_OK = qw( hex2tuple tuple2hex );
@@ -57,7 +57,7 @@ Robert Rothenberg <rrwo at cpan.org>
 
 =head1 LICENSE
 
-Copyright (c) 2004 Robert Rothenberg. All rights reserved.
+Copyright (c) 2004-2005 Robert Rothenberg. All rights reserved.
 This program is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
 

@@ -1,6 +1,6 @@
+#!/usr/bin/perl
 
 use strict;
-use warnings;
 
 use constant TEST_CASES => {
     "black"		    => 0x000000,
@@ -12,7 +12,7 @@ use constant TEST_CASES => {
 
 use Test::More tests => 3 + (9 * 5);
 
-use_ok('Graphics::ColorNames', (qw(tuple2hex)));
+use_ok('Graphics::ColorNames', 1.06, (qw(tuple2hex)));
 
 my $rgb = Graphics::ColorNames->new(qw( X ));
 ok(defined $rgb);

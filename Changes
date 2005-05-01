@@ -1,5 +1,14 @@
 Revision history for Perl extension Graphics::ColorNames.
 
+1.06	Tue Mar 29 2005
+	- cleaned up tests
+	- added DSLIP information to POD
+	- added Test::Pod tests
+        - added Pod::Coverage tests
+	- minor documentation changes
+	- uses Test::Prereq to test distro prereqs
+	- added SIGNATURE to distribution
+
 1.05    Fri Sep  3 2004
 	- correction to Graphics::ColourNames
 	- correction to README

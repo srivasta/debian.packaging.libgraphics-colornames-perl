@@ -11,7 +11,7 @@ use Module::Load;
 
 our @ISA = qw( Exporter );
 
-our $VERSION   = '1.05';
+our $VERSION   = '1.06';
 # $VERSION = eval $VERSION;
 
 our @EXPORT    = qw( );
@@ -66,6 +66,8 @@ sub _load_scheme
   {
     my $self   = shift;
     my $scheme = shift;
+
+    # Should this be switched to use Module::Pluggable? Hm....
 
     my $module = join('::', __PACKAGE__, $scheme);
     eval {
@@ -385,7 +387,7 @@ be used:
 
 =head2 Color Schemes
 
-Currently four schemes are available:
+The following schemes are available by default:
 
 =over
 
@@ -404,6 +406,9 @@ are also used with CSS and SVG.
 100 color names names associated Netscape 1.1 (I cannot determine whether
 they were once usable in Netscape or were arbitrary names for RGB values--
 many of these names are not recognized by later versions of Netscape).
+
+This scheme may be deprecated in future versions, but available as a
+separate module.
 
 =item Windows
 
@@ -472,6 +477,16 @@ F<rgb.txt> file.
 L<Graphics::ColorObject> can convert between RGB and other color space
 types.
 
+=head1 DSLIP
+
+  R - Released
+  d - Developer
+  p - Perl-only
+  h - Hybrid interface
+  p - Standard Perl
+
+See L<http://cpan.uwinnipeg.ca/htdocs/faqs/dslip.html>
+
 =head1 AUTHOR
 
 Robert Rothenberg <rrwo at cpan.org>
@@ -501,7 +516,7 @@ this module.
 
 =head1 LICENSE
 
-Copyright (c) 2001-2004 Robert Rothenberg. All rights reserved.
+Copyright (c) 2001-2005 Robert Rothenberg. All rights reserved.
 This program is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
 

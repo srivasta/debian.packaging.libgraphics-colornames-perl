@@ -18,15 +18,22 @@ with Netscape 1.1 (I cannot determine whether they were once usable in
 Netscape or were arbitrary names for RGB values-- I<many of these names are
 not recognized by later versions of Netscape>).
 
-=head2 Inconsistencies
-
-Note that the colors "gold", "lightblue" and "mediumblue" are the
-same. This is because the reference Netscape page (below) shows those
-RGB values. (As of December 2002, the page is still on-line.)
+This scheme is deprecated, and will be removed from future versions of 
+L<Graphics::ColorNames> but available as a separate module from CPAN.
 
 =head1 SEE ALSO
 
-L<Graphics::ColorNames>, L<http://home1.netscape.com/home/bg/colorindex.html>
+L<Graphics::ColorNames>
+
+L<Graphics::ColorNames::Mozilla>
+
+L<Graphics::ColorNames::IE>
+
+L<Graphics::ColorNames::SVG>
+
+The color names come from L<http://wp.netscape.com/home/bg/colorindex.html>.
+Corrections to errors in the Netscape spec are due to 
+L<http://www.he.net/info/color/>.
 
 =head1 AUTHOR
 
@@ -34,22 +41,24 @@ Robert Rothenberg <rrwo at cpan.org>
 
 =head2 Acknowledgements
 
-<magnus at mbox604.swipnet.se> who pointed out Inconsistencies
+"Magnus", who pointed out inconsistencies.
+
+Gary Vollink, who suggested color schemes for later Netscape versions,
+and pointed out that the original Netscape page had moved.
 
 =head1 LICENSE
 
-Copyright (c) 2001-2004 Robert Rothenberg. All rights reserved.
+Copyright (c) 2001-2008 Robert Rothenberg. All rights reserved.
 This program is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
 
 =cut
 
-require 5.006;
-
 use strict;
 use warnings;
 
-our $VERSION = '1.05';
+our $VERSION = '2.11';
+#$VERSION = eval $VERSION;
 
 # See http://home1.netscape.com/home/bg/colorindex.html
 
@@ -65,7 +74,7 @@ sub NamesRgbTable() {
     "yellow"              =>0xffff00,
     "black"               =>0x000000,
     "aquamarine"          =>0x70db93,
-    "baker\'schocolate"   =>0x5c3317,
+    "bakerschocolate"     =>0x5c3317,
     "blueviolet"          =>0x9f5f9f,
     "brass"               =>0xb5a642,
     "brightgold"          =>0xd9d919,
@@ -94,7 +103,7 @@ sub NamesRgbTable() {
     "firebrick"           =>0x8e2323,
     "flesh"               =>0xf5ccb0,
     "forestgreen"         =>0x238e23,
-    "gold"                =>0xcd7f32,
+    "gold"                =>0xcd7f32, #
     "goldenrod"           =>0xdbdb70,
     "grey"                =>0x545454,
     "greencopper"         =>0x856363,
@@ -102,7 +111,7 @@ sub NamesRgbTable() {
     "huntergreen"         =>0x8e2323,
     "indianred"           =>0xf5ccb0,
     "khaki"               =>0x238e23,
-    "lightblue"           =>0xcd7f32,
+    "lightblue"           =>0xcdd9d9, # 
     "lightgrey"           =>0xdbdb70,
     "lightsteelblue"      =>0x545454,
     "lightwood"           =>0x856363,
@@ -110,7 +119,7 @@ sub NamesRgbTable() {
     "mandarianorange"     =>0x8e2323,
     "maroon"              =>0xf5ccb0,
     "mediumaquamarine"    =>0x238e23,
-    "mediumblue"          =>0xcd7f32,
+    "mediumblue"          =>0x3232cd, #
     "mediumforestgreen"   =>0xdbdb70,
     "mediumgoldenrod"     =>0xeaeaae,
     "mediumorchid"        =>0x9370db,
@@ -138,7 +147,7 @@ sub NamesRgbTable() {
     "salmon"              =>0x6f4242,
     "scarlet"             =>0x8c1717,
     "seagreen"            =>0x238e68,
-    "semi-sweetchocolate" =>0x6b4226,
+    "semisweetchocolate"  =>0x6b4226,
     "sienna"              =>0x8e6b23,
     "silver"              =>0xe6e8fa,
     "skyblue"             =>0x3299cc,
@@ -159,6 +168,8 @@ sub NamesRgbTable() {
   };
 }
 
+
 1;
 
 __END__
+

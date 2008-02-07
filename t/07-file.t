@@ -4,7 +4,7 @@ use strict;
 
 use Test::More tests => 10;
 
-use_ok('Graphics::ColorNames', 1.06, qw( hex2tuple tuple2hex ));
+use_ok('Graphics::ColorNames', 1.10, qw( hex2tuple tuple2hex ));
 
 tie my %colors, 'Graphics::ColorNames', './t/rgb.txt';
 ok(tied %colors);

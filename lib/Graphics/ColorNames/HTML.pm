@@ -25,7 +25,10 @@ proper spelling was added.
 
 =head1 SEE ALSO
 
-C<Graphics::ColorNames>,  HTML 4.0 Specificiation <http://www.w3.org>
+L<Graphics::ColorNames>,  HTML 4.0 Specificiation <http://www.w3.org>
+
+L<Graphics::ColorNames::SVG>, which uses color names based on the SVG
+specification (which is more recent).
 
 =head1 AUTHOR
 
@@ -33,18 +36,17 @@ Robert Rothenberg <rrwo at cpan.org>
 
 =head1 LICENSE
 
-Copyright (c) 2001-2004 Robert Rothenberg. All rights reserved.
+Copyright (c) 2001-2008 Robert Rothenberg. All rights reserved.
 This program is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
 
 =cut
 
-require 5.006;
-
 use strict;
 use warnings;
 
-our $VERSION = '1.11';
+our $VERSION = '2.11';
+#$VERSION = eval $VERSION;
 
 sub NamesRgbTable() {
   use integer;

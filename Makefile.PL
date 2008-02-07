@@ -2,16 +2,23 @@
 use ExtUtils::MakeMaker;
 WriteMakefile
 (
+          'PL_FILES' => {},
+          'INSTALLDIRS' => 'site',
           'NAME' => 'Graphics::ColorNames',
+          'EXE_FILES' => [],
           'VERSION_FROM' => 'lib/Graphics/ColorNames.pm',
           'PREREQ_PM' => {
-                           'Carp' => '0',
-                           'IO::File' => '0',
-                           'Module::Load' => '0.1',
-                           'Test::More' => '0',
-                           'base' => '0'
-                         },
-          'INSTALLDIRS' => 'site',
-          'PL_FILES' => {}
+                           'base' => 0,
+                           'Test::Exception' => 0,
+                           'IO::File' => 0,
+                           'File::Spec' => 0,
+                           'FileHandle' => 0,
+                           'Exporter' => 0,
+                           'Carp' => 0,
+                           'Test::More' => 0,
+                           'Module::Loaded' => 0,
+                           'Module::Load' => '0.10',
+                           'DirHandle' => 0
+                         }
         )
 ;

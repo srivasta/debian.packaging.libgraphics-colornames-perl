@@ -1,4 +1,107 @@
-Revision history for Perl extension Graphics::ColorNames.
+Revision history for Perl extension Graphics::ColorNames (with significant
+updates noted by asterisks, '*'):
+
+2.11    Thu Jan 10 2008
+	- updated version number for release
+	- minor changes of text format
+	- added fix for problems with Graphics::ColorNames::GrayScale
+
+2.10_05 Tue Jan  8 2008
+	* checks if modules already loaded before re-loading them
+	  (uses Module::Loaded for this)
+	- requires changed to load for dynamically loaded modules
+	- updated README
+
+2.10_04 Sun Jan  6 2008
+	- reverted back to standard object-oriented style
+	- Tie::Sub is only loaded when a subroutine is used for scheme
+
+2.10_03 Sat Jan  5 2008
+	- tests use Test::Exception to catch errors
+	- rewrite parts of documentation to emphasize object-oriented
+	  interface rather than the tied interface
+	- implemented a proper DESTROY method
+	- misc code cleanup and reorganization
+
+2.10_02 Fri Jan  4 2008
+	* added support for Color::Library dictionaries
+	- minor changes to error messages
+	- underscores in color names ignored
+	- auto-loading color names in object-oriented interface, e.g.
+	  $obj->black()
+	- stubs for DESTROY and UNTIE methods
+	- 06-obj.t test more flexible
+	- pointless 01-ColourNames test removed
+	- more updates to documentation
+
+2.10_01 Thu Dec 20 2007
+	* non-word characters (spaces, punctuation) now ignored in
+	  color names
+	* smarter handling of comments in rgb.txt files
+	* significant rewrite to parts of the code, requires Tie::Sub
+	* rewritten how FIRSTKEY and NEXTKEY methods work
+	- better error handling
+	- minor updates to documentation
+	- typos in comments
+	- added better checking for minimum Perl version reqs
+	- added aliaes w/out punctuation in Netscape scheme
+
+2.04    Mon Dec 17 2007
+	- fixed inconsistencies in Netscape color scheme
+
+2.03    Mon Dec 17 2007
+	- fixed glitch with version test
+	- cleaned up format of text files
+	- removed unneeded dependency
+
+2.02    Sun Dec 16 2007
+	- renamed developer-related test scripts
+	- removed 90-prereqs.t (it wasn't working properly sometimes)
+	- added DEVEL_TESTS environment variable as requirement for
+	  developer tests
+	- README generated from POD using Pod::Readme
+
+2.01    Sun Dec 16 2007
+	- Changed versions of specific color schemes to match main module
+	* Removed Graphics::ColourNames from the distribution
+	- updated documentation for Netscape.pm
+
+2.0_04  Tue Oct 24 2006
+	- fixed Pod::Coverage tests (RT#20923)
+	- various optimizations
+	- changed to use inside-out object scheme
+	- no longer signing code (too many problems w/Module::Signature)
+
+2.0_03  Fri Apr  8 2005
+	- fixed bug with reading scheme from FileHandle type
+	- fixed glitch in pod-coverage test
+	- corrected version in Graphics::ColourNames
+	- added tests to check versions in sync
+
+2.0_02  Thu Apr  7 2005
+	- lesser-used routines made into autoloaded methods
+	- added Test::Portabiity::Files test
+	- minor updates for Netscape theme
+	- added support for :utility export tag
+	- added support for :all export tag
+
+2.0_01  Mon Apr  4 2005
+	- removed DSLIP information from POD, since it has little meaning
+	- tweaked code
+	- color scheme can be a module name
+	- fixed bug in Pod::Coverage test, uses Test::Pod::Coverage
+	* major change in how schemes are stored, which affects priority
+	  when CODE scheme types are used
+	- can load rgb.txt from GLOB, FileHandle or IO::File
+	- references can be specified as possible schemes in constructor
+	- added public load_scheme method
+	- various optimizations and tweaks
+	- IO::File is loaded only as needed
+	- rgb.txt file must be radable to be loaded
+	- tweaked tests
+	- RGB passthrough now consistently returns lowercase values
+	- minor optimization in FETCH for RGB passthrough
+	- added all_schemes function to query schemes
 
 1.06	Tue Mar 29 2005
 	- cleaned up tests
@@ -101,4 +204,5 @@ Revision history for Perl extension Graphics::ColorNames.
 
 0.10  19 Feb 2001
 	- original (experimental) version released
+
 

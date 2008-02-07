@@ -8,17 +8,35 @@ use constant TEST_CASES => {
     "green"		    => 0x00ff00,
     "blue"		    => 0x0000ff,
     "white"                 => 0xffffff,
+  # some arbitrary colors added for testing the autoloaded color names
+    "lavenderblush"	    => 0xfff0f5,
+    "lavender_blush"	    => 0xfff0f5,
+    "LavenderBlush"	    => 0xfff0f5,
+    "LAVENDERBLUSH"	    => 0xfff0f5,
 };
 
-use Test::More tests => 3 + (9 * 5);
+use Test::More;
+use Test::Exception;
 
-use_ok('Graphics::ColorNames', 1.06, (qw(tuple2hex)));
+my $tests = TEST_CASES;
+
+plan tests => 4 + (11 * (keys %$tests));
+
+use_ok('Graphics::ColorNames', 2.1003, (qw(tuple2hex)));
 
 my $rgb = Graphics::ColorNames->new(qw( X ));
 ok(defined $rgb);
 ok($rgb->isa('Graphics::ColorNames'));
 
-my $tests = TEST_CASES;
+{
+    # This causes errors
+
+    # local $TODO = "AutoLoading non-existent color method";
+    dies_ok {
+	$rgb->SomeNonExistentColor();
+    } "SomeNonExistentColor should have failed";
+
+}
 
 foreach my $name (keys %$tests) {
 
@@ -35,6 +53,12 @@ foreach my $name (keys %$tests) {
      $c = $rgb->hex($name);
   ok( $c =~ /^[0-9a-f]{6}$/i );  
 
+  ok($rgb->$name eq $c);
+  {
+      local $TODO = "Handle the can() method";
+      ok($rgb->can($name));
+  }
+
   my $d = $rgb->rgb($name, ',');
   ok( $d =~ /^\d{1,3}(\,\d{1,3}){2}$/ );
 
@@ -45,3 +69,4 @@ foreach my $name (keys %$tests) {
   ok( tuple2hex(@v) eq $c );
 
 }
+

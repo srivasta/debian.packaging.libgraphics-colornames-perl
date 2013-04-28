@@ -1,0 +1,159 @@
+libgraphics-colornames-perl (2.11-5) experimental; urgency=low
+
+  * Moved to a new, dh based build schema
+
+ -- Manoj Srivastava <srivasta@debian.org>  Sun, 28 Apr 2013 04:05:12 -0700
+
+libgraphics-colornames-perl (2.11-4) unstable; urgency=low
+
+  *
+  * [fdfdf3a]: [ligraphics-colornames-perl]: PREFIX is no longer
+    mutable, use DESTDIR. Preemptive bug fix.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Sun, 13 Sep 2009 18:18:57 -0500
+
+libgraphics-colornames-perl (2.11-3) unstable; urgency=low
+
+  * Updated the location of the repository for the package (moved to git)
+  * Moved to the new, stream lined target mechanism in the build system.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Thu, 29 May 2008 22:18:01 -0500
+
+libgraphics-colornames-perl (2.11-2) unstable; urgency=low
+
+  * Bug fix: "libgraphics-colornames-perl: FTBFS with Perl 5.10: the empty
+    /usr/lib/perl5 is gone", thanks to Niko Tyni. Actually, not just
+    /usr/lib/perl5 , all of /usr/lib was gone. closes: #467786
+
+ -- Manoj Srivastava <srivasta@debian.org>  Tue, 18 Mar 2008 17:43:12 -0500
+
+libgraphics-colornames-perl (2.11-1) unstable; urgency=low
+
+  * New upstream release
+    - updated version number for release
+    - minor changes of text format
+    - added fix for problems with Graphics::ColorNames::GrayScale
+    * checks if modules already loaded before re-loading them
+      (uses Module::Loaded for this)
+    - requires changed to load for dynamically loaded modules
+    - updated README
+    - reverted back to standard object-oriented style
+    - Tie::Sub is only loaded when a subroutine is used for scheme
+    - tests use Test::Exception to catch errors
+    - rewrite parts of documentation to emphasize object-oriented
+      interface rather than the tied interface
+    - implemented a proper DESTROY method
+    - misc code cleanup and reorganization
+    * added support for Color::Library dictionaries
+    - minor changes to error messages
+    - underscores in color names ignored
+    - auto-loading color names in object-oriented interface, e.g.
+      $obj->black()
+    - stubs for DESTROY and UNTIE methods
+    - 06-obj.t test more flexible
+    - pointless 01-ColourNames test removed
+    - more updates to documentation
+    * non-word characters (spaces, punctuation) now ignored in
+      color names
+    * smarter handling of comments in rgb.txt files
+    * significant rewrite to parts of the code, requires Tie::Sub
+    * rewritten how FIRSTKEY and NEXTKEY methods work
+    - better error handling
+    - minor updates to documentation
+    - typos in comments
+    - added better checking for minimum Perl version reqs
+    - added aliaes w/out punctuation in Netscape scheme
+    - fixed inconsistencies in Netscape color scheme
+    - fixed glitch with version test
+    - cleaned up format of text files
+    - removed unneeded dependency
+    - renamed developer-related test scripts
+    - removed 90-prereqs.t (it wasn't working properly sometimes)
+    - added DEVEL_TESTS environment variable as requirement for
+      developer tests
+    - README generated from POD using Pod::Readme
+    - Changed versions of specific color schemes to match main module
+    * Removed Graphics::ColourNames from the distribution
+    - updated documentation for Netscape.pm
+    - fixed Pod::Coverage tests (RT#20923)
+    - various optimizations
+    - changed to use inside-out object scheme
+    - no longer signing code (too many problems w/Module::Signature)
+    - fixed bug with reading scheme from FileHandle type
+    - fixed glitch in pod-coverage test
+    - corrected version in Graphics::ColourNames
+    - added tests to check versions in sync
+    - lesser-used routines made into autoloaded methods
+    - added Test::Portabiity::Files test
+    - minor updates for Netscape theme
+    - added support for :utility export tag
+    - added support for :all export tag
+    - removed DSLIP information from POD, since it has little meaning
+    - tweaked code
+    - color scheme can be a module name
+    - fixed bug in Pod::Coverage test, uses Test::Pod::Coverage
+    * major change in how schemes are stored, which affects priority
+      when CODE scheme types are used
+    - can load rgb.txt from GLOB, FileHandle or IO::File
+    - references can be specified as possible schemes in constructor
+    - added public load_scheme method
+    - various optimizations and tweaks
+    - IO::File is loaded only as needed
+    - rgb.txt file must be radable to be loaded
+    - tweaked tests
+    - RGB passthrough now consistently returns lowercase values
+    - minor optimization in FETCH for RGB passthrough
+    - added all_schemes function to query schemes
+
+ -- Manoj Srivastava <srivasta@debian.org>  Thu, 07 Feb 2008 17:03:26 -0600
+
+libgraphics-colornames-perl (1.06-1) unstable; urgency=low
+
+  * New upstream release
+      - cleaned up tests
+      - added DSLIP information to POD
+      - added Test::Pod tests
+      - added Pod::Coverage tests
+      - minor documentation changes
+      - uses Test::Prereq to test distro prereqs
+      - added SIGNATURE to distribution
+
+ -- Manoj Srivastava <srivasta@debian.org>  Sun,  1 May 2005 11:31:45 -0500
+
+libgraphics-colornames-perl (1.05-1) unstable; urgency=low
+
+  * New upstream release.
+        - updates to POD
+        - correction to Graphics::ColourNames
+        - correction to README
+        - a filehandle for a rgb.txt file can be specified
+        - hooks to support CODE scheme types (as with module
+          Graphics::ColorNames::GrayScale 2.00)
+        - ColourNames.pm has same version of ColorNames.pm
+        - added Graphics::ColourNames alias
+        - minor changes to ColorNames.pm
+        - corrected typo in REQUIREMENTS (wrong Perl version)
+        - uses Module::Load for improved dynamic loading
+        - EXISTS works across multiple color schemes
+        - bug in FETCH that returned key has been fixed
+        - corrected bad link in POD
+        - rebuilt distribution with proper META.yml
+        - added required rgb.txt for tests to MANIFEST and distro
+        * now requires Perl 5.6.0
+        - uses IO::File
+        - option to parse an rgb.txt file
+        - removed TODO from distribution
+        - Netscape.pm, HTML.pm and Windows.pm warnings enabled
+        - additions and corrections in POD
+        - added Build.PL to distribution
+        - added hex() and rgb() methods
+        - created object-oriented interface
+        - additions and corrections in POD
+
+ -- Manoj Srivastava <srivasta@debian.org>  Fri,  1 Oct 2004 12:49:42 -0500
+
+libgraphics-colornames-perl (0.32-1) unstable; urgency=low
+
+  * New package, initial packaging for Debian.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Sat, 24 Apr 2004 21:28:07 -0500

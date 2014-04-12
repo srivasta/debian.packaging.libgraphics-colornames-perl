@@ -1,11 +1,11 @@
 Source: libgraphics-colornames-perl
-VCS-Git: git://git.debian.org/~srivasta/debian/libgraphics-colornames-perl.git
-VCS-Browser: http://git.debian.org/?p=users/srivasta/debian/libgraphics-colornames-perl.git
+VCS-Git: git://anonscm.debian.org/users/srivasta/debian/libgraphics-colornames-perl.git
+VCS-Browser: http://anonscm.debian.org/gitweb/?p=users/srivasta/debian/libgraphics-colornames-perl.git
 Priority: optional
 Section: perl
 Maintainer: Manoj Srivastava <srivasta@debian.org>
 Homepage: http://search.cpan.org/~rrwo/Graphics-ColorNames-2.11/lib/Graphics/ColorNames.pm
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Build-Depends-Indep: perl-modules, libmodule-load-perl, libpod-coverage-perl,
                      libtest-pod-perl, libtest-exception-perl, debhelper (>= 9.0.0)
 

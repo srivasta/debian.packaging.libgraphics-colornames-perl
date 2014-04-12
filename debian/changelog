@@ -1,3 +1,9 @@
+libgraphics-colornames-perl (2.11-6) unstable; urgency=low
+
+  * Moving to unstable.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Fri, 11 Apr 2014 22:51:58 -0700
+
 libgraphics-colornames-perl (2.11-5) experimental; urgency=low
 
   * Moved to a new, dh based build schema

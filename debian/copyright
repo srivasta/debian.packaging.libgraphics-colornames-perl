@@ -1,0 +1,22 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: libgraphics-colornames-perl
+Source: <url:http://search.cpan.org/~rrwo/>
+
+Files: *
+Copyright: 2001-2008 Robert Rothenberg
+License: Artistic-1.0
+
+Files: debian/*
+Copyright: 2013 Manoj Srivastava <srivasta@debian.org>
+License: Artistic-1.0
+
+License: Artistic-1.0
+ This program is free software; you can redistribute it and/or modify it
+ under the terms of the "Artistic License" which comes with Debian.
+ .
+ THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+ WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES
+ OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+ .
+ On Debian systems, the complete text of the Artistic License
+ can be found in "/usr/share/common-licenses/Artistic".

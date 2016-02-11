@@ -1,3 +1,12 @@
+libgraphics-colornames-perl (2.11-6.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add build dependency on libmodule-build-perl and replace perl-modules
+    build dependency with perl
+    Closes: #789334 -- FTBFS with perl 5.22
+
+ -- Damyan Ivanov <dmn@debian.org>  Fri, 24 Jul 2015 11:59:11 +0000
+
 libgraphics-colornames-perl (2.11-6) unstable; urgency=low
 
   * Moving to unstable.

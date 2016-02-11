@@ -6,7 +6,7 @@ Section: perl
 Maintainer: Manoj Srivastava <srivasta@debian.org>
 Homepage: http://search.cpan.org/~rrwo/Graphics-ColorNames-2.11/lib/Graphics/ColorNames.pm
 Standards-Version: 3.9.5
-Build-Depends-Indep: perl-modules, libmodule-load-perl, libpod-coverage-perl,
+Build-Depends-Indep: perl, libmodule-build-perl, libmodule-load-perl, libpod-coverage-perl,
                      libtest-pod-perl, libtest-exception-perl, debhelper (>= 9.0.0)
 
 Package: libgraphics-colornames-perl

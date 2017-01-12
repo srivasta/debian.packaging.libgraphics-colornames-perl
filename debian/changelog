@@ -1,3 +1,12 @@
+libgraphics-colornames-perl (2.11-7.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Drop explicit Build-Depends: perl-modules-5.22
+    Closes: #839022
+  * Depends: s/perl/${perl:Depends}/
+
+ -- Andreas Tille <tille@debian.org>  Thu, 12 Jan 2017 19:19:21 +0100
+
 libgraphics-colornames-perl (2.11-7) unstable; urgency=low
 
   * Ack NMU (thanks to Damyan Ivanov <dmn@debian.org>)

@@ -1,0 +1,4 @@
+# format version number, currently 2; this line is compulsory!
+version=3
+
+https://metacpan.org/release/Graphics-ColorNames   .*/Graphics-ColorNames-v?(\d[\d.-]+)\.(?:tar(?:\.gz|\.bz2)?|tgz|zip)$ debian

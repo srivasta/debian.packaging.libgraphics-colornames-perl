@@ -1,3 +1,11 @@
+libgraphics-colornames-perl (3.5.0-2) unstable; urgency=medium
+
+  * Actually copy over _all_ the changes from the NMU
+  * Bug fix: "Build-Depends on perl-modules-5.22", thanks to Niko Tyni
+    (Closes: #839022).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Tue, 19 May 2020 17:59:43 -0700
+
 libgraphics-colornames-perl (3.5.0-1) unstable; urgency=medium
 
   * New Upstream version

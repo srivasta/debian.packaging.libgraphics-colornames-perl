@@ -1,3 +1,13 @@
+libgraphics-colornames-perl (3.5.0-3) unstable; urgency=medium
+
+  * The GCN::HTML and GCN::Windows schemes have been removed and released
+    as separate modules.
+  * Autoloaded color name methods were removed.
+  * the HTML color scheme is deprecated.
+  * This breaks libgraphics-colorobjects-perl (<= 0.5.0-8)
+
+ -- Manoj Srivastava <srivasta@debian.org>  Wed, 20 May 2020 18:58:37 -0700
+
 libgraphics-colornames-perl (3.5.0-2) unstable; urgency=medium
 
   * Actually copy over _all_ the changes from the NMU

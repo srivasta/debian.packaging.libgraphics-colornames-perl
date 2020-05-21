@@ -15,6 +15,7 @@ Build-Depends-Indep: perl, libmodule-build-perl, libmodule-load-perl,
 Package: libgraphics-colornames-perl
 Architecture: all
 Depends: ${misc:Depends}, perl, libmodule-load-perl
+Breaks: libgraphics-colorobject-perl (<= 0.5.0-8)
 Recommends: libpod-coverage-perl, libtest-pod-perl
 Description: defines RGB values for common color names
  This package defines RGB values for common color names. The intention
